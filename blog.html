@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog — SlotExpert Amsterdam</title>
+  <meta name="description" content="Tips en advies over sloten, beveiliging en inbraakpreventie van SlotExpert Amsterdam.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/lucide-static@latest/font/lucide.css">
+  <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
+</head>
+<body>
+
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo">Slot<span>Expert</span></a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html#about">Over Ons</a></li>
+        <li><a href="index.html#services">Diensten</a></li>
+        <li><a href="index.html#reviews">Reviews</a></li>
+        <li><a href="index.html#faq">FAQ</a></li>
+        <li><a href="blog.html" style="color:var(--heading)">Blog</a></li>
+        <li><a href="index.html#contact" class="btn btn-primary">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <section class="page-header">
+    <div class="container">
+      <span class="badge">Blog</span>
+      <h1>Beveiligingstips & Nieuws</h1>
+      <p>Alles over sloten, beveiliging en inbraakpreventie.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="blog-grid">
+        <article class="blog-card"><img src="images/hero.jpg" alt="Inbraakpreventie"><div class="blog-card-body"><span class="tag">Beveiliging</span><h3><a href="#">7 tips om inbraak te voorkomen deze zomer</a></h3><p>De zomervakantie is piekseizoen voor inbrekers. Met deze tips maakt u het ze zo moeilijk mogelijk.</p><span class="meta">12 april 2026</span></div></article>
+        <article class="blog-card"><img src="images/about.jpg" alt="SKG sterren"><div class="blog-card-body"><span class="tag">Sloten</span><h3><a href="#">SKG-sterren uitgelegd: welk slot heeft u nodig?</a></h3><p>Van 1 tot 3 sterren: wij leggen uit wat de verschillen zijn en welk niveau bij uw situatie past.</p><span class="meta">8 april 2026</span></div></article>
+        <article class="blog-card"><img src="images/craft.jpg" alt="Smart locks"><div class="blog-card-body"><span class="tag">Smart Home</span><h3><a href="#">Smart locks: de voor- en nadelen op een rij</a></h3><p>Handig, maar zijn ze ook veilig? Wij vergelijken de populairste smart locks op de Nederlandse markt.</p><span class="meta">3 april 2026</span></div></article>
+        <article class="blog-card"><img src="images/detail.jpg" alt="Buitengesloten"><div class="blog-card-body"><span class="tag">Tips</span><h3><a href="#">Buitengesloten: wat nu? Stap-voor-stap gids</a></h3><p>Geen paniek. Wij leggen uit wat u het beste kunt doen als u voor een dichte deur staat.</p><span class="meta">28 maart 2026</span></div></article>
+        <article class="blog-card"><img src="images/project1.jpg" alt="Meergrenpelslot"><div class="blog-card-body"><span class="tag">Beveiliging</span><h3><a href="#">Wat is een meergrenpelslot en waarom wilt u er een?</a></h3><p>Een meergrenpelslot vergrendelt uw deur op meerdere punten. Ontdek waarom dit de gouden standaard is.</p><span class="meta">22 maart 2026</span></div></article>
+        <article class="blog-card"><img src="images/project2.jpg" alt="Cilinder vervangen"><div class="blog-card-body"><span class="tag">DIY</span><h3><a href="#">Kunt u zelf een cilinder vervangen?</a></h3><p>In theorie wel, maar er zijn valkuilen. Lees wanneer u het zelf kunt doen en wanneer u beter een expert belt.</p><span class="meta">15 maart 2026</span></div></article>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><a href="index.html" class="nav-logo">Slot<span>Expert</span></a><p>Uw betrouwbare slotenmaker in Amsterdam. 24/7 bereikbaar.</p></div>
+        <div><h4>Diensten</h4><ul><li><a href="index.html#services">Slot openen</a></li><li><a href="index.html#services">Vervangen</a></li><li><a href="index.html#services">Beveiliging</a></li></ul></div>
+        <div><h4>Navigatie</h4><ul><li><a href="index.html#about">Over Ons</a></li><li><a href="index.html#reviews">Reviews</a></li><li><a href="blog.html">Blog</a></li></ul></div>
+        <div><h4>Contact</h4><ul><li><a href="tel:+31200000000">020-0000000</a></li><li><a href="mailto:info@slotexpert.nl">info@slotexpert.nl</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 SlotExpert Amsterdam. Alle rechten voorbehouden.</p><div class="footer-social"><a href="#"><i class="lucide-facebook"></i></a><a href="#"><i class="lucide-instagram"></i></a><a href="#"><i class="lucide-linkedin"></i></a></div></div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script>
+    document.getElementById('hamburger').addEventListener('click', () => { document.getElementById('nav-links').classList.toggle('active'); });
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.utils.toArray('.blog-card').forEach((el, i) => { gsap.from(el, { scrollTrigger: { trigger: el, start: 'top 85%' }, y: 50, opacity: 0, duration: .7, delay: i%3*.12, ease: 'power3.out' }); });
+  </script>
+</body>
+</html>
